@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="ip address tracker page for Charlotte Norford's Porfolio">
+  <meta name="keywords" content="Web, developer, front-end, web design, ip address tracker ">
+  <meta name="author" content="Charlotte Norford">
+  <title>Frontend Mentor | IP Address Tracker</title>
+
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+
+
+  <link rel="stylesheet" href="./styles/reset.min.css">
+  <link rel="stylesheet" href="./styles/style-global.min.css">
+
+  <link rel="stylesheet" href="./styles/style-ip-address.min.css">
+  <link rel="stylesheet" href="./fonts/fontawesome-free-6.2.0-web/fontawesome-free-6.2.0-web/css/solid.min.css">
+  <link rel="stylesheet" href="./fonts/fontawesome-free-6.2.0-web/fontawesome-free-6.2.0-web/css/brands.min.css">
+  <link rel="stylesheet" href="./fonts/fontawesome-free-6.2.0-web/fontawesome-free-6.2.0-web/css/fontawesome.min.css">
+
+  <link rel="stylesheet" href="./styles/google.css">
+  <link rel="stylesheet" href="./styles/leaflet.css">
+  <script defer  src="./javaScript/leaflet.js"></script>
+</head>
+
+<body>
+ 
+
+ 
+
+  <div class="background-img" role="img" aria-label="background image showing dual roles of designer and developer"></div>
+
+   <div class="container">
+    <div role="img" aria-label="glass effect of image" class="blur-img"> </div>
+
+    <header class="header header-index ">
+      <nav class="nav">
+        <ul class="nav__logo">
+          <li class="nav__item nav__item--big">
+            <a class="nav__link nav__link--big designer-font  " href="index.html#home_">
+              &#60;/&#62; CNorford
+            </a>
+          </li>
+        </ul>
+        <ul class="nav__internal-items">
+          <li class="nav__item nav__item--top">
+            <button class="nav__link nav__link--small nav__link--bars"
+              aria-label="menu button to access main navigation. Click to access navigation on mobile">
+              <i class="fas fa-bars"></i>
+            </button>
+
+            <button class="nav__link nav__link--small   nav__link--cross"
+              aria-label="menu button to hide main navigation. Click to hide navigation on mobile">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </li>
+
+          <li class="nav__drop-down-menu">
+            <ul class="nav__drop-down-items">
+
+              <li class="nav__item nav__item--small">
+                <a class="nav__link nav__link--medium  " href="index.html#work_">Work</a>
+              </li>
+
+              <li class="nav__item nav__item--small">
+                <a class="nav__link nav__link--medium  " href="index.html#education_">Education</a>
+              </li>
+              <li class="nav__item nav__item--small">
+                <a class="nav__link nav__link--medium  " href="index.html#testimonials_">Reviews</a>
+              </li>
+
+              <li class="nav__item nav__item--small nav__item--top">
+                <a class="nav__link nav__link--medium nav__link--yellow" href="index.html#projects_">
+                  Projects
+                </a>
+
+                <ul class="nav__drop-down-sub-menu">
+                  <li class="nav__item nav__item--small">
+                    <a class="nav__link nav__link--medium " href="currency-converter.html" target="_blank">Currency
+                      Converter</a>
+                  </li>
+
+                  <li class="nav__item nav__item--small">
+                    <a class="nav__link nav__link--medium " href="forecaster.html" target="_blank">
+                      Forecaster
+                    </a>
+                  </li>
+                  <li class="nav__item nav__item--small">
+                    <a class="nav__link nav__link--medium " href="ip-address-tracker.html" target="_blank">
+                      IP Tracker
+                    </a>
+                  </li>
+
+                  <li class="nav__item nav__item--small">
+                    <a class="nav__link nav__link--medium " href="https://c-n-black-hair-and-beauty-blog.netlify.app/"
+                      target="_blank">
+                      CoiledKind
+                    </a>
+                  </li>
+                  <li class="nav__item nav__item--small">
+                    <a class="nav__link nav__link--medium " href="https://charlotte-norford-robot-job-board.netlify.app/" target="_blank">
+                      Robot Job Board
+                    </a>
+                  </li>
+
+                  <li class="nav__item nav__item--small">
+                    <a class="nav__link nav__link--medium "
+                      href="https://charlotte-norford-colour-experiment-v.netlify.app/" target="_blank">
+                      Colour Game
+                    </a>
+                  </li>
+                </ul>
+              </li>
+
+
+
+
+              <li class="nav__item nav__item--small">
+                <a class="nav__link nav__link--medium nav__link--yellow" href="index.html#contact_">Contact
+                </a>
+              </li>
+
+
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+
+  <main class="main ip-address  ">
+ 
+    <div class="app">
+
+      <div class="banner">
+        <div class="app-title-input-section-container">
+          <h1 class="banner__label">IP Address Tracker</h1>
+
+          <form class="input-section" action="#" method="get">
+            <label class="input-section__label" for="search">Search for an IP & domain</label>
+            <input id="search" type="search" class="input-section__search-input" name="search"
+              placeholder="Search for an IP & domain">
+
+            <button id="submit" type="submit" class="input-section__submit-button" name="submit">
+              <img alt="arrow image" class="input-section__submit-img" src="./assets/ip-address-images/icon-arrow.svg">
+            </button>
+          </form>
+        </div>
+
+
+      </div>
+      <div class="main__geolocation-container">
+        <div class="ip-content-container content-container">
+          <h2 class="ip-content-container__title content-container__title">
+            ip address
+          </h2>
+          <div id="ip" class="ip-content-container__information content-container__information"></div>
+        </div>
+
+        <div class="separating-line"></div>
+        <div class="location-content-container content-container">
+          <h2 class="location-content-container__title content-container__title">
+            location
+          </h2>
+          <div id="location" class="location-content-container__information content-container__information"></div>
+        </div>
+
+        <div class="separating-line"></div>
+
+        <div class="time-one-content-container content-container">
+          <h2 class="time-zone-content-container__title content-container__title">
+            time zone
+          </h2>
+          <div id="timezone" class="time-zone-content-container__information content-container__information"></div>
+        </div>
+
+        <div class="separating-line"></div>
+
+        <div class="isp-content-container content-container">
+          <h2 class="isp-content-container__title content-container__title">
+            ISP
+          </h2>
+          <div id="isp" class="isp-content-container__information content-container__information"></div>
+        </div>
+      </div>
+      <div id="map" ></div>
+    </div>
+
+    <aside class="attribution">
+      Challenge design specified by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>
+    </aside>
+
+  </main>
+    <footer class="footer  ">
+      <p class="footer__copyright-statement-and-email">
+        <span>ⓒ Charlotte Norford 2026 </span>
+        <a class="footer__link" href="mailto:cnorfwork@yahoo.com">cnorfwork@yahoo.com</a>
+      </p>
+
+      <hr>
+
+      <nav>
+        <ul class="footer__link-area">
+          <li class="footer__item">
+            <a class="footer__link designer-font" href="index.html#home_" >&#60;/&#62; CNorford</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="index.html#work_">Work </a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="index.html#education_">Education</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="index.html#testimonials_ ">Reviews</a>
+          </li>
+
+          <li class="footer__item">
+            <a class="footer__link" href="index.html#projects_"> Projects </a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="index.html#contact_">Contact </a>
+          </li>
+        </ul>
+      </nav>
+    </footer>
+</div>
+<script src="./javaScript/jquery-3.6.1.min.js"></script>
+<script src="./javaScript/app.min.js"></script>
+<script src="./javaScript/script.min.js"></script>
+
+</body>
+
+</html>
