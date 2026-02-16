@@ -160,7 +160,8 @@
               <q>
 
                 <img src="./assets/quotation.webp" class="quotation" alt="quotation mark">
-                <span> Hi, I’m Charlotte, a graduate/junior developer specialising in modern web applications and websites.</span>
+                <span> Hi, I’m Charlotte, a graduate/junior developer specialising in modern web applications and
+                  websites.</span>
               </q>
 
               <div class="introduction-and-links-container__links-container">
@@ -247,6 +248,25 @@
                     device. For example, the jobs saved on a chrome device on a mobile cannot be accessed on a firefox
                     browser on the same device or a chrome on a different device. The same is localised and specific.
                   </p>
+
+
+                  <ul class="project-container__case-study">
+
+                    <li>Problem: Tracking multiple job applications in a simple board can get messy without a clear
+                      workflow.</li>
+
+                    <li> Constraints: No backend; data is saved locally to a specific browser or device; each job needs
+                      an ID, name, notes, and status; optional columns can be hidden or shown.</li>
+
+                    <li> Approach: Created a job form and columns similar to a Kanban board with CRUD operations (add,
+                      update, edit, remove) and a clear “Save Job List” step to keep changes; added user-friendly
+                      features (quick job name buttons, hide/show list).</li>
+
+
+                    <li> Outcome: Users can manage a personal job board that stays on the same browser or device,
+                      allowing for easy updates and deletions without needing a server.</li>
+                  </ul>
+
                   <ol class="project-container__instructions">
 
 
@@ -255,7 +275,8 @@
                       board.</li>
                     <li>To save a job permanently to the job list, press "Save Job List". </li>
 
-                    <li>To edit a job, click the "Edit Job" button to edit a job , fill in the fields specified in step 1
+                    <li>To edit a job, click the "Edit Job" button to edit a job , fill in the fields specified in step
+                      1
                       then do steps 2 and 3 to update, using "Update Job".</li>
                     <li>To remove a job, click the "Remove Job" button then do step 3 to save the changes.</li>
                     <li>Optional - press "show/hide List" button to show or hide a column.</li>
@@ -302,6 +323,30 @@
                     and locate the registration location on the map. An API is used to map a URL address or an IP
                     address to a internet service provider - plus their location and time zone.
                   </p>
+
+                  <ul class="project-container__case-study">
+
+
+                    <li>Problem: Users need a quick way to translate an IP address or domain into a clear network or
+                      geographic service location. </li>
+
+                    <li>Constraints: The tool must handle user input for either an IP address or domain, or allow for an
+                      empty submission. It includes a map user interface and follows a Frontend Mentor challenge. It
+                      credits mapping data and services like OpenStreetMap and Mapbox. </li>
+
+                    <li>Approach: I built a search bar and a results panel. If the input is empty, the app prompts the
+                      user to get their own IP information. If there is input, it fetches registration data for the
+                      provided IP address or domain, updating the text fields and the map. </li>
+
+                    <li>Outcome: Users can get details about an IP address or domain and see its location on a map,
+                      along with clearly labeled fields showing the IP, location, time zone, and ISP.</li>
+
+
+
+
+
+
+                  </ul>
                   <ol class="project-container__instructions">
                     <li> The app will ask to retrieve the user's IP address if no characters or empty characters are
                       submitted </li>
@@ -350,16 +395,40 @@
                     another
                     currency of another country. This uses live data from an API to fetch the conversion rates (1 unit
                     of source currency converted to destination currency).</p>
+
+                  </ol>
+
+
+                  <ul class="project-container__case-study">
+                    <li> Purpose: A live-rate currency converter that calculates conversions between a chosen source and
+                      destination currency and displays rate and timestamp outputs.</li>
+
+                    <li> Problem: Users need up-to-date currency conversions, including the rate and converted total,
+                      without
+                      searching for exchange rates manually.</li>
+
+                    <li> Constraints: The tool must fetch live conversion-rate data, support many currencies with long
+                      dropdowns, and show the timestamp, 1-unit comparison, and converted transaction amount.</li>
+
+                    <li>Approach: I created a form that allows the user to select the source and destination
+                      currencies,
+                      enters an amount, submits it, and the app then shows the exchange-rate fields and calculated
+                      totals.</li>
+
+                    <li> Outcome: A simple conversion process with clear outputs for the exchange rate,
+                      calculation
+                      timestamp, and both source and destination amounts.</li>
+
+                  </ul>
                   <ol class="project-container__instructions">
                     <li> Pick a country source currency from the drop down </li>
                     <li> Pick a destination country's currency </li>
                     <li> Add how much they want to convert </li>
                     <li> Submit </li>
-                  </ol>
-                  <p class="project-container__summary-of-app"> Once submitted, the app shows the timestamp,
-                    1 unit of the source compared to the destination unit(s),
-                    and the total source currency input converted to destination currency.</p>
 
+                    <li> Once submitted, the app shows the timestamp,
+                      1 unit of the source compared to the destination unit(s),
+                      and the total source currency input converted to destination currency.</li>
 
                 </div>
 
@@ -406,17 +475,40 @@
                 <div class="project-container__description">
                   <p class="project-container__prog-languages">Tech: HTML CSS JavaScript jQuery </p>
 
-                  <br>
+
 
                   <p class="project-container__summary-of-app"> View on a laptop that supports a resolution width of
-                    1380
-                    pixels.
-                    Required for a fair experiment. The project investigates whether colour sorting and mixing symbols
-                    are
-                    effective for colour recognition and colour gradients tasks. In the case of gradients,
-                    if someone is cooking meat, recognising the colour
-                    changes from pink to brown indicates to someone with colour vision
-                    deficiency (CVD) that their food is cooked correctly. </p>
+                    1380 pixels. Required for a fair experiment. The project investigates whether colour sorting and
+                    mixing symbols
+                    are effective for colour recognition and colour gradients tasks. In the case of gradients,
+                    if someone is cooking meat, recognising the colour changes from pink to brown indicates to someone
+                    with colour vision
+                    deficiency (CVD) that their food is cooked correctly. Research was conducted using journals relevant
+                    to CVD , HCI (human-centred interaction), Psychology and Colour Science</p>
+
+                  <ul class="project-container__case-study">
+                    <li>Purpose: This is a controlled experiment that investigates whether colour-sorting and
+                      symbol-based
+                      cues help with colour recognition and gradient tasks, including for colour vision deficiency
+                      (CVD).</li>
+
+
+
+                    <li> Problem: People with CVD may have difficulty interpreting colour changes, such as gradients.
+                      This
+                      experiment looks into whether alternative cues can improve recognition accuracy.</li>
+
+                    <li> Constraints: This fair experiment requires a laptop width of 1380px. The participant groups are
+                      divided into two: groups 1 to 6 have CVD or simulated CVD, and groups 7 to 12 have normal vision.
+                      Access is controlled by participant-specific passwords. The responses are recorded in text files
+                      for analysis.</li>
+
+                    <li>Outcome: An app that gathers responses from participant groups under
+                      controlled display conditions.
+
+                    </li>
+
+                  </ul>
                   <ol class="project-container__instructions">
 
 
@@ -465,6 +557,32 @@
                   <p class="project-container__summary-of-app"> This project allows a user to view historical
 
                     and projected fuel prices.</p>
+
+                  <ul class="project-container__case-study">
+
+
+
+                    <li>Purpose: A tool designed to display historical fuel prices and a 12-month forecast through
+                      “Historical” and “Forecast” modes.</li>
+
+                    <li> Problem: Users need to review past price behavior and view possible short-term price trends in
+                      one chart that shows graphs. </li>
+
+                    <li>Constraints: A two-mode workflow, historical navigation using month controls, and forecast mode
+                      that
+                      should show 12 months of future projections.</li>
+
+                    <li> Approach: I added a mode selection and navigation controls to move back or forward by 1 month
+                      or
+                      12
+                      months, including options to jump to the first or last 12 months.</li>
+
+                    <li> Outcome: The user sees a graph with data points for fuel prices related to solid, liquid, gas
+                      and
+                      electricity.</li>
+
+
+                  </ul>
                   <ol class="project-container__instructions">
                     <li> Pick a mode - historical or forecaster </li>
                     <li> Historical - use buttons below to view data </li>
@@ -507,15 +625,31 @@
 
                   <p class="project-container__prog-languages"> Tech: HTML CSS JavaScript (in progress)</p>
 
-                  <p class="project-container__summary-of-app"> This project is a front-end blog website focused
-                    on Black hair care and beauty topics, aiming to inspire developers and stakeholders by
-                    showcasing key front-end concepts such as API consumption, CRUD operations, and dynamic
-                    content rendering using a JSON Server mock API.</p>
-
-                  <p class="project-container__summary-of-app"> Users can create, read, update, and delete blog posts,
+                  <p class="project-container__summary-of-app">This project is a front-end blog website focused
+                    on Black hair care and beauty topics. Users can create, read, update, and delete blog posts,
                     demonstrating client-side data management
-                    and seamless communication via a REST-style API without a custom backend.</p>
+                    and integrated API usaage without a custom backend.</p>
 
+                  <ul class="project-container__case-study">
+                    <li> Purpose: A front-end blog concept for Black hair care and beauty. It aims to showcase front-end
+                      patterns like API consumption, CRUD, and dynamic rendering. This project is currently marked “in
+                      progress.” </li>
+
+                    <li> Problem: The goal is to create an editorial-style site with topic navigation and posts. It
+                      should also demonstrate modern front-end data patterns. </li>
+
+                    <li> Constraints: The site is still under development. The portfolio shows that the Home, About, and
+                      LCO pages are partially developed. The live homepage features repeated “Latest/Trending” blocks
+                      and multiple “read more” links. </li>
+
+                     <li> Approach: I built a blog layout with a top navigation menu, topic grouping (Latest Articles,
+                      Trending, Blog Topics), article cards that include images and dates, and a subscribe form. This
+                      lays the foundation for future API-backed CRUD functionality. </li>
+
+                    <li> Outcome: The early prototype is usable and demonstrates layout, routing intent, and content
+                      presentation. However, it feels unfinished due to duplication and incomplete sections.</li>
+
+                  </ul>
                   <p class="project-container__summary-of-app"> Currently, the Home, About, and LCO Method pages are
                     partially developed to
                     demonstrate layout structure, routing, and content population driven by API.
@@ -1051,7 +1185,7 @@
 
 
       <div id="work" class="work appearSection">
-          
+
         <h1>Work</h1>
 
         <div class="sections-tables-timeline-container">
@@ -1059,7 +1193,8 @@
             <div class="timeline">
 
               <div class="timeline__key-moment-a-container">
-                <button aria-label="timeline button for designer / developer role" class="timeline__key-moment-a" id="Designer-Developer">
+                <button aria-label="timeline button for designer / developer role" class="timeline__key-moment-a"
+                  id="Designer-Developer">
                   <span class="no-display">Web designer/<br>developer 2025</span>
                 </button>
                 &#160;<label>Web designer/<br>developer 2025</label>
@@ -1081,7 +1216,8 @@
               </div>
 
               <div class="timeline__key-moment-a-container">
-                <button aria-label="timeline button for tutor role in 2016 - 2020" class="timeline__key-moment-a" id="Tutor2">
+                <button aria-label="timeline button for tutor role in 2016 - 2020" class="timeline__key-moment-a"
+                  id="Tutor2">
                   <span class="no-display">Tutor</span>
                 </button>
                 &#160;<label>Tutor 2016 </label>
@@ -1092,7 +1228,8 @@
               </div>
 
               <div class="timeline__key-moment-a-container">
-                <button aria-label="timeline button for receptionist role" class="timeline__key-moment-a" id="Receptionist">
+                <button aria-label="timeline button for receptionist role" class="timeline__key-moment-a"
+                  id="Receptionist">
                   <span class="no-display">Receptionist</span>
                 </button>
                 &#160;<label>Receptionist</label>
@@ -1126,26 +1263,28 @@
                     transparency and accountability in British politics </li>
 
                   <li>
-                     Technical stack includes - HTML, CSS, JavaScript, and Tailwind CSS, with a planned transition to
+                    Technical stack includes - HTML, CSS, JavaScript, and Tailwind CSS, with a planned transition to
                     PHP and WordPress to support content editing and long-term maintenance by volunteers</li>
 
                   <li>
-                   	Working directly with the main stakeholder to gather requirements and define website structure, features, and content
+                    Working directly with the main stakeholder to gather requirements and define website structure,
+                    features, and content
                   </li>
 
                   <li>
-                     Creating low- and high-fidelity wireframes and user flow diagrams using Figma
+                    Creating low- and high-fidelity wireframes and user flow diagrams using Figma
 
                   <li>
-                     Editing and creating responsive assets in Adobe Photoshop and Illustrator
+                    Editing and creating responsive assets in Adobe Photoshop and Illustrator
                   </li>
 
                   <li>
-                  	Managing version control and deployment using GitHub and GitHub Desktop
+                    Managing version control and deployment using GitHub and GitHub Desktop
                   </li>
 
                   <li>
-                  	Integrating email subscription forms and APIs to support mailing the organisation's mailing list functionality.
+                    Integrating email subscription forms and APIs to support mailing the organisation's mailing list
+                    functionality.
 
                   <li>
                     Applying black-box and white-box testing to ensure the code meets the organisation's specifications
