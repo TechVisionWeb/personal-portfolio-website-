@@ -2,4 +2,4 @@
 
 button:hover {
     /* border-color: black; */
-}textarea{margin-bottom:1rem}label{padding-top: 5px;padding-bottom: 5px;font-family:inherit}@media screen and (max-width:1100px){form{width:99%}}@media screen and (max-width:1000px){.contact>h1{margin-top: 2rem;margin-bottom: 1rem;}.contact button{margin-left:2.5%}}@media screen and (min-width:1001px){#contact>h1{top:0;margin-bottom: 1rem;}}@media screen and (min-width:1101px){form{position:relative;width:80%}}
+}textarea{margin-bottom:1rem}label{padding-top: 5px;padding-bottom: 5px;font-family:inherit}@media screen and (max-width:1100px){form{width:99%}}@media screen and (max-width:1000px){.contact>h1{margin-top: 2rem;margin-bottom: 1rem;}.contact button{margin-left:2.5%}}@media screen and (min-width:1001px){#contact>h1{top:0;/* margin-bottom: 1rem; */}}@media screen and (min-width:1101px){form{position:relative;width:80%}}
