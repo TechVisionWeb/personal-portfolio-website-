@@ -132,7 +132,7 @@ function correctDomainFormat(e) {
 function getInformation(e, t, o) {
     var n = "",
         a = {},
-        i = "at_22QyA1gO4QyimkLR9pVl5gWqdWLc9";
+        i = "at_KpS5iMQm1UsP3I8vbkrJxymwuGsHN&";
     ajaxFunction(a = "" == e ? {
         apiKey: i
     } : isAnIP(e) ? {
