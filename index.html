@@ -11,9 +11,13 @@
 
 
   <title>CNorford Home</title>
-  <link rel="stylesheet" href="./styles/reset.min.css">
-  <link rel="stylesheet" href="./styles/style-global.min.css">
-  <link rel="stylesheet" href="./styles/style-education-work.min.css">
+  <link rel="preload" as="style" href="./styles/reset.min.css"   onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" as="style" href="./styles/style-global.min.css"  onload="this.onload=null;this.rel='stylesheet'">
+   <link rel="preload" as="style" href="./styles/style-index.min.css"  onload="this.onload=null;this.rel='stylesheet'">
+     <link  rel="preload" as="style" href="./styles/style-contact.min.css"  onload="this.onload=null;this.rel='stylesheet'">
+
+
+  <link  rel="preload" as="style" href="./styles/style-projects-testimonials.min.css"  onload="this.onload=null;this.rel='stylesheet'">
 
 
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -26,17 +30,15 @@
   <meta name="theme-color" content="#ffffff">
 
 
-  <link rel="stylesheet" href="./styles/style-index.min.css">
-  <link rel="stylesheet" href="./styles/style-projects-testimonials.min.css">
-  <link rel="stylesheet" href="./styles/style-contact.min.css">
-
+ 
   <script defer src="https://kit.fontawesome.com/9ccd878ce7.js" crossorigin="anonymous"></script>
-
-  <link rel="stylesheet" href="./styles/google.css">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Finger+Paint&display=swap');
+</style>
 </head>
 
 <body>
-  <div class="background-img" role="img" aria-label="background image showing dual roles of designer and developer">
+  <div class="background-img" role="presentation" ></div>
   </div>
 
   <div id="container_"></div>
@@ -232,7 +234,7 @@
 
 
 
-                  <img src="https://i.ibb.co/b52VKXNq/robot-job-board-thumbnail-desktop.webp"
+                  <img src="./assets/robot_job_board_thumbnail-desktop.webp"
                     alt="thumbnail of a robot job board" class="project-container__thumbnail">
 
 
@@ -1260,7 +1262,7 @@
                   </li>
 
                   <li>
-                    Creating low- and high-fidelity wireframes and user flow diagrams using Figma
+                    Creating wireframes and user flow diagrams using Figma
 
                   <li>
                     Editing and creating responsive assets in Adobe Photoshop and Illustrator
@@ -1460,7 +1462,7 @@
     </main>
     <footer class="footer  ">
       <p class="footer__copyright-statement-and-email">
-        <span>ⓒ CharlotteNorford 2026 </span>
+        <span>ⓒ Charlotte Norford 2026 </span>
         <a class="footer__link" href="mailto:cnorfwork@yahoo.com">cnorfwork@yahoo.com</a> </p>
         
              <p class="projects__github"><a href="https://github.com/TechVisionWeb" target="_blank">https://github.com/TechVisionWeb</a></p>
