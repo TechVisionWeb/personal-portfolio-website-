@@ -1,3 +1,5 @@
+const axios = require("axios");
+
 exports.handler = async (event) => {
   try {
     const API_KEY = process.env.API_KEY;
@@ -5,53 +7,62 @@ exports.handler = async (event) => {
     if (!API_KEY) {
       return {
         statusCode: 500,
-        body: JSON.stringify({ error: "API_KEY missing" })
+        body: JSON.stringify({
+          error: "API key is missing in environment variables"
+        })
       };
     }
 
-    const input = event.queryStringParameters?.data;
+    console.log("API Key Status:", API_KEY ? "Loaded" : "Missing");
+
+    const params = event.queryStringParameters || {};
+    const input = params.data ? params.data.trim() : null;
 
     if (!input) {
       return {
         statusCode: 400,
-        body: JSON.stringify({ error: "No IP or domain provided" })
+        body: JSON.stringify({
+          error: "No IP address or domain provided"
+        })
       };
     }
 
-    const paramKey = /[a-z]/i.test(input) ? "domain" : "ipAddress";
+    // Determine if input is domain or IP
+    const isDomain = /[a-z]/i.test(input);
+    const paramKey = isDomain ? "domain" : "ipAddress";
 
-    const url =
-      `https://geo.ipify.org/api/v2/country,city` +
-      `?apiKey=${API_KEY}&${paramKey}=${encodeURIComponent(input)}`;
+    const config = {
+      params: {
+        apiKey: API_KEY,
+        [paramKey]: input
+      }
+    };
 
-    console.log("Calling:", url);
-
-    const response = await fetch(url);
-
-    const data = await response.json();
-
-    if (!response.ok) {
-      console.error("GeoIP error:", data);
-      return {
-        statusCode: response.status,
-        body: JSON.stringify(data)
-      };
-    }
+    const response = await axios.get(
+      "https://geo.ipify.org/api/v2/country,city",
+      config
+    );
 
     return {
       statusCode: 200,
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(data)
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(response.data)
     };
 
   } catch (err) {
-    console.error("Function error:", err);
+
+    const errorDetails = err.response ? err.response.data : err.message;
+
+    console.error("Axios Error:", errorDetails);
 
     return {
       statusCode: 500,
       body: JSON.stringify({
         error: "Failed to fetch IP information",
-        message: err.message
+        details: errorDetails,
+        debug_received: event.queryStringParameters?.data || null
       })
     };
   }
