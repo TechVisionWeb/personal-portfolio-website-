@@ -8,12 +8,12 @@ exports.handler = async (event) => {
       return {
         statusCode: 500,
         body: JSON.stringify({
-          error: "API key is missing in environment variables"
+          error: "API key is missing in the environment variables"
         })
       };
     }
 
-    console.log("API Key Status:", API_KEY ? "Loaded" : "Missing");
+    console.log("Is the API Key captured?: ", API_KEY ? "Captured" : "Not available");
 
     const params = event.queryStringParameters || {};
     const input = params.data ? params.data.trim() : null;
@@ -52,17 +52,16 @@ exports.handler = async (event) => {
     };
 
   } catch (err) {
-
+//IF there is an error response from server then send, otherwise it could be a network problem
     const errorDetails = err.response ? err.response.data : err.message;
 
-    console.error("Axios Error:", errorDetails);
+    console.error("Error:", errorDetails);
 
     return {
       statusCode: 500,
       body: JSON.stringify({
         error: "Failed to fetch IP information",
-        details: errorDetails,
-        debug_received: event.queryStringParameters?.data || null
+        details: errorDetails
       })
     };
   }
